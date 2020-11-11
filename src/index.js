@@ -15,6 +15,12 @@ app.get('/', (req, res, next) => {
   });
 });
 
+app.post('/', (req, res, next) => {
+  res.json({
+    message: 'POST REQUEST MADE 🥖',
+  });
+});
+
 app.listen(4000, () => {
   console.log('Server started on port 4000 ✔');
 });
