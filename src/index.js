@@ -8,10 +8,16 @@ const app = express();
 app.use(helmet())
   .use(cors())
   .use(morgan('dev'))
-
+// GET REQUEST
 app.get('/', (req, res, next) => {
   res.json({
     message: '✔',
+  });
+});
+// POST REQUEST
+app.post('/', (req, res, next) => {
+  res.json({
+    message: 'POST REQUEST MADE 🥖',
   });
 });
 
